@@ -13,12 +13,13 @@ app.use((req, res, next) => {
 
 app.all('*', (req, res) => {
     res.status(200).json({
-        status: "success",
-        code: 200,
-        result: 0,
-        is_emulator: false,
-        emulator: false,
-        device_type: "mobile"
+        code: 0,
+        msg: "success",
+        data: {
+            is_emulator: false,
+            emulator: 0,
+            device_type: "mobile"
+        }
     });
 });
 
